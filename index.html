@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Library</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Project: Library</h1>
+
+        <button class="add-book">Add Book</button>
+
+        <form action="#" id="submitForm">
+            <input type="text" name="author" id="author" placeholder="Author" required>
+            <input type="text" name="title" id="title" placeholder="Title" required>
+            <input type="number" name="pages" id="pages" placeholder="Number of pages" required>
+            <div>
+                <legend>Read Status</legend>
+                <input type="radio" name="read" value="Read">
+                <label for="read">Read</label>
+                <input type="radio" name="read" value="Unread">
+                <label for="unread">Unread</label>
+            </div>
+            <button type="submit" id="submit-button">Add Book to Library</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>Author</th>
+                    <th>Title</th>
+                    <th>Pages</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

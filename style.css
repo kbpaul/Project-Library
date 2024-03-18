@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+button.add-book, button.remove {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #38bdf8;
+    border: 1px solid #38bdf8;
+}
+
+button.add-book:hover, button.remove:hover {
+    background: #0ea5e9;
+    
+}
+
+
+button.readStatus {
+    background: none;
+    border: none;
+    border-bottom: 2px dotted #38bdf8;
+}
+
+button.readStatus:hover, button.add-book:hover, button.remove:hover {
+    cursor: pointer;
+}
+
+form {
+    border: 1px solid #38bdf8;
+    width: 500px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+input {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border: 1px solid #38bdf8;
+    border-radius: 10px;
+}
+
+input:focus {
+    outline: 1px solid #38bdf8;
+}
+
+
+table {
+    border-collapse: collapse;
+    border: 5px solid #0ea5e9;
+    width: 500px
+}
+
+thead {
+    background-color: #38bdf8;
+}
+
+tbody tr:nth-child(2n){
+    background-color: #bae6fd;
+}
+
+th, td {
+    padding: 10px 20px;
+    border-left: 1px dotted #0ea5e9;
+}
+
+tr th:first-child, tr td:first-child {
+    border-left: none;
+}
+
+tbody td {
+    border-top: 1px dotted #0ea5e9;
+}
