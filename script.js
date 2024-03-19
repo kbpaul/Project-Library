@@ -108,15 +108,11 @@ function handleRemoveButtonClick(event) {
     const row = event.target.closest('tr');
     if (row) {
         // Get the title of the book from the row
-        const title = row.children[1].innerText;
-        
+        const title = row.children[2].innerText;
         // Filter out the book to be removed from the library array
-        myLibrary = myLibrary.filter(book => {
-            return book.title !== title;
-        });
+        myLibrary = myLibrary.filter(book =>  book.title !== title);
         // Remove the row from the table
         row.remove();
-        console.log(myLibrary);
     }
 }
 
@@ -129,7 +125,7 @@ function findBookByTitle(titleName) {
 // Function to toggle Read Status and display books
 function toggleReadStatusFunc(event){
     const row = event.target.closest('tr');
-    const title = row.children[1];
+    const title = row.children[2];
     let book = findBookByTitle(title.innerText);
     
 
@@ -137,9 +133,7 @@ function toggleReadStatusFunc(event){
     // Check if any book is found with the given author name
     if (book.length > 0) {
         // Toggle the read status of the first book
-        console.log(book[0].read);
         book[0].toggleReadStatus();
-        console.log(book[0].read);
 
         // Display books
         displayBooks();
@@ -155,7 +149,6 @@ const bookRead = 'Read';
 const newBook = new Book(myBookAuthor, myBookTitle, bookPages, bookRead);
 myLibrary.push(newBook);
 displayBooks();
-attachToggleEventListeners();
 
 
 // Initial setup - hide the form
