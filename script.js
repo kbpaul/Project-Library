@@ -3,23 +3,40 @@ const submitForm = document.querySelector("#submitForm");
 const tbody = document.querySelector('tbody');
 
 
-// Book constructor function
-function Book(author, title,  pages, read){
-    this.author = author;
-    this.title = title;
-    this.pages = pages;
-    this.read = read;
-}
+// // Book constructor function
+// function Book(author, title,  pages, read){
+//     this.author = author;
+//     this.title = title;
+//     this.pages = pages;
+//     this.read = read;
+// }
 
-// Prototype method to toggle read status of a book
-Book.prototype.toggleReadStatus = function() {
-    if(this.read === 'Read'){
-        this.read = 'Unread';
-    } else {
-        this.read = 'Read';
+// // Prototype method to toggle read status of a book
+// Book.prototype.toggleReadStatus = function() {
+//     if(this.read === 'Read'){
+//         this.read = 'Unread';
+//     } else {
+//         this.read = 'Read';
+//     }
+// }
+
+
+class Book {
+    constructor(author, title, pages, read) {
+        this.author = author;
+        this.title = title;
+        this.pages = pages;
+        this.read = read;
+    }
+
+    toggleReadStatus() {
+        if(this.read === 'Read'){
+            this.read = 'Unread';
+        } else {
+            this.read = 'Read';
+        }
     }
 }
-
 // Array to store library books
 let myLibrary = [];
 
